@@ -2043,11 +2043,11 @@ export default function BlogPage({ data, posts }: Props) {
       </div>
       <div className="blog-tab container m-auto px-3">
         <Tabs defaultActiveKey="1">
-          {data.categoriesList.map((category, index = 1) => {
+          {data.categoriesList.map((category:any, index = 1) => {
             return (
               <TabPane tab={`${category.name}`} key={`${index}`}>
                 <div className="flex flex-wrap">
-                  {posts.postsList.map((post) => {
+                  {posts.postsList.map((post:any) => {
                     return (
                       <div className="w-full md:w-1/2 lg:w-1/3 pr-3 pb-3 ">
                           <Link href={`/blog/${post.slug}`} >

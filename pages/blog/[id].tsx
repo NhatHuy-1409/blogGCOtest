@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   console.log(ctx);
 
-  const detailData = await getDetailPostsData(`${ctx.params.id}`);
+  const detailData = await getDetailPostsData(`thiet-ke-website-ngap-tran-uu-dai-trong-thang-7`);
   // Pass data to the page via props
   return { props: { detailData } };
 };
