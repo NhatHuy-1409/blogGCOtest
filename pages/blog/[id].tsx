@@ -29,9 +29,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export async function getStaticPaths() {
-  const data = await getDetailPostsData(
-    "thiet-ke-website-ngap-tran-uu-dai-trong-thang-7"
-  );
+  const data = await getDetailPostsData("thiet-ke-website-ngap-tran-uu-dai-trong-thang-7");
 
   return {
     paths: [
