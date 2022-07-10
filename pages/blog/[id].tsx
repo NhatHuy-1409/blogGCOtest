@@ -4,7 +4,7 @@ import { MainLayout } from "../../components/layout";
 import { getDetailPostsData, getPostsData } from "../../utils/get-data";
 
 interface Props {
-  detailData: any;
+  detailData: {detailPost:any};
 }
 
 export default function BlogDetailPage({ detailData }: Props) {
