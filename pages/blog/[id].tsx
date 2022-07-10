@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function BlogDetailPage({ detailData }: Props) {
-  console.log(detailData.detailPost);
+  // console.log(detailData.detailPost);
   var parse = require("html-react-parser");
   parse(`${detailData.detailPost[0].content.rendered}`);
   return (
@@ -21,11 +21,7 @@ export default function BlogDetailPage({ detailData }: Props) {
   );
 }
 BlogDetailPage.Layout = MainLayout;
-export const getStaticProps: GetStaticProps = async (ctx) => {
-  // Fetch data from external API
-  console.log("hh");
-
-  console.log(ctx);
+export const getStaticProps: GetStaticProps = async () => {
 
   const detailData = await getDetailPostsData(`thiet-ke-website-ngap-tran-uu-dai-trong-thang-7`);
   // Pass data to the page via props
@@ -36,9 +32,6 @@ export async function getStaticPaths() {
   const data = await getDetailPostsData(
     "thiet-ke-website-ngap-tran-uu-dai-trong-thang-7"
   );
-  console.log(data);
-
-  // Get the paths we want to pre-render based on posts
 
   return {
     paths: [
