@@ -27,13 +27,13 @@ export async function getPostsData() {
     postsList,
   };
 }
-export async function getPathDetailPosts(id) {
+export async function getPathDetailPosts(id:any) {
   return fetch(
     `https://api.gcosoftware.vn/wp-json/wp/v2/posts?slug=${id}`
   ).then((res) => res.json());
 }
 
-export async function getDetailPostsData(id) {
+export async function getDetailPostsData(id:any) {
   const detailPost = await getPathDetailPosts(id);
 console.log('kk');
 
