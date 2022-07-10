@@ -2047,9 +2047,9 @@ export default function BlogPage({ data, posts }: Props) {
             return (
               <TabPane tab={`${category.name}`} key={`${index}`}>
                 <div className="flex flex-wrap">
-                  {posts.postsList.map((post:any) => {
+                  {posts.postsList.map((post:any,index:1) => {
                     return (
-                      <div className="w-full md:w-1/2 lg:w-1/3 pr-3 pb-3 ">
+                      <div key={index} className="w-full md:w-1/2 lg:w-1/3 pr-3 pb-3 ">
                           <Link href={`/blog/${post.slug}`} >
                         <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-auto">
                         <a href="#">
